@@ -11,7 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160107202032) do
+ActiveRecord::Schema.define(version: 20160108071014) do
+
+  create_table "registers", force: :cascade do |t|
+    t.string   "fname",       limit: 255
+    t.string   "lname",       limit: 255
+    t.string   "email",       limit: 255
+    t.integer  "contactno",   limit: 4
+    t.string   "collegename", limit: 255
+    t.string   "coladdress",  limit: 255
+    t.string   "city",        limit: 255
+    t.string   "state",       limit: 255
+    t.integer  "pincode",     limit: 4
+    t.string   "fphydirname", limit: 255
+    t.string   "lphydirname", limit: 255
+    t.integer  "pdcontact",   limit: 4
+    t.string   "sports",      limit: 255
+    t.string   "menwomen",    limit: 255
+    t.string   "singdouble",  limit: 255
+    t.boolean  "accepted"
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  limit: 255, default: "", null: false
