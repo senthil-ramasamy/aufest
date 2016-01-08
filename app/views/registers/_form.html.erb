@@ -1,0 +1,83 @@
+<%= form_for(@register) do |f| %>
+  <% if @register.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@register.errors.count, "error") %> prohibited this register from being saved:</h2>
+
+      <ul>
+      <% @register.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :fname %><br>
+    <%= f.text_field :fname %>
+  </div>
+  <div class="field">
+    <%= f.label :lname %><br>
+    <%= f.text_field :lname %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :contactno %><br>
+    <%= f.text_field :contactno %>
+  </div>
+  <div class="field">
+    <%= f.label :collegename %><br>
+    <%= f.text_field :collegename %>
+  </div>
+  <div class="field">
+    <%= f.label :coladdress %><br>
+    <%= f.text_field :coladdress %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br>
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :state %><br>
+    <%= f.text_field :state %>
+  </div>
+  <div class="field">
+    <%= f.label :pincode %><br>
+    <%= f.number_field :pincode %>
+  </div>
+  <div class="field">
+    <%= f.label :fphydirname %><br>
+    <%= f.text_field :fphydirname %>
+  </div>
+  <div class="field">
+    <%= f.label :lphydirname %><br>
+    <%= f.text_field :lphydirname %>
+  </div>
+  <div class="field">
+    <%= f.label :pdcontact %><br>
+    <%= f.number_field :pdcontact %>
+  </div>
+  <div class="field">
+	<%= f.label :sports %>
+  	<%= f.select(:sports) do %>
+   		<%= content_tag(:option, "Basketball", value: "Basketball") %>
+  	<% end %>
+  </div>
+  <div class="field">
+    <%= f.label :menwomen %><br>
+    <%= f.text_field :menwomen %>
+  </div>
+  <div class="field">
+    <%= f.label :singdouble %><br>
+    <%= f.text_field :singdouble %>
+  </div>
+  <div class="field">
+    <%= f.label :accepted %><br>
+    <%= f.check_box :accepted %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
