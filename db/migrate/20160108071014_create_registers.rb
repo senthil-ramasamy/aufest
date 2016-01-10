@@ -4,12 +4,12 @@ class CreateRegisters < ActiveRecord::Migration
       t.string :fname
       t.string :lname
       t.string :email
-      t.integer :contactno
+      t.integer :contactno,:limit => 8
       t.string :collegename
       t.string :coladdress
       t.string :city
       t.string :state
-      t.integer :pincode
+      t.integer :pincode,:limit => 8
       t.string :fphydirname
       t.string :lphydirname
       t.integer :pdcontact

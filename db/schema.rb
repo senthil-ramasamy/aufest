@@ -17,12 +17,12 @@ ActiveRecord::Schema.define(version: 20160108071014) do
     t.string   "fname",       limit: 255
     t.string   "lname",       limit: 255
     t.string   "email",       limit: 255
-    t.integer  "contactno",   limit: 4
+    t.integer  "contactno",   limit: 8
     t.string   "collegename", limit: 255
     t.string   "coladdress",  limit: 255
     t.string   "city",        limit: 255
     t.string   "state",       limit: 255
-    t.integer  "pincode",     limit: 4
+    t.integer  "pincode",     limit: 8
     t.string   "fphydirname", limit: 255
     t.string   "lphydirname", limit: 255
     t.integer  "pdcontact",   limit: 4

@@ -28,6 +28,7 @@ class RegistersController < ApplicationController
 
     respond_to do |format|
       if @register.save
+	RegisterNotifier.send_signup_email(@register).deliver
         format.html { redirect_to @register, notice: 'Register was successfully created.' }
         format.json { render :show, status: :created, location: @register }
       else
